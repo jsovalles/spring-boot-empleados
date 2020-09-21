@@ -17,14 +17,7 @@ import java.util.List;
 
 public class CsvUtils {
 
-    public static boolean hasCSVFormat(MultipartFile file) {
-
-
-
-        return true;
-    }
-
-    public static List<Empleado> csvToEmpleados(InputStream is) {
+    public static List<Empleado> csvToEmployees(InputStream is) {
         try (BufferedReader fileReader = new BufferedReader(new InputStreamReader(is, "UTF-8"));
              CSVParser csvParser = new CSVParser(fileReader,
                      CSVFormat.DEFAULT.withFirstRecordAsHeader().withIgnoreHeaderCase().withTrim());) {
